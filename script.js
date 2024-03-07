@@ -5,6 +5,8 @@ const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 
+
+// object with array defining football team
 const myFavoriteFootballTeam = {
     team: "Argentina",
     sport: "Football",
@@ -66,7 +68,7 @@ const myFavoriteFootballTeam = {
             position: "defender",
             number: 8,
             isCaptain: false,
-            nickname: null,
+            nickname: null,""
           },
           {
             name: "José Luis Cuciuffo",
@@ -168,3 +170,17 @@ const myFavoriteFootballTeam = {
           },
     ],
 };
+
+Object.freeze(myFavoriteFootballTeam);
+
+// declaring variables for football team
+const { sport, team, year, players} = myFavoriteFootballTeam;
+const { coachName } = myFavoriteFootballTeam.headCoach;
+
+// displays the information on the team stats
+typeOfSport.textContent = sport;
+teamName.textContent = team;
+worldCupYear.textContent = year;
+headCoach.textContent = coachName;
+
+const setPlayerCards = () => {};
