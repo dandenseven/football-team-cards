@@ -185,6 +185,25 @@ headCoach.textContent = coachName;
 
 
 // added a new array to add player card information to the page
-const setPlayerCards = (( ) => {
+const setPlayerCards = () => {
+  playerCards.innerHTML += arr.map(({
+    name, position, number, isCaptain, nickname
+  }) => {
+    `<div class="player-card">
+    <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
+    <p>Position: ${position}</p>
+    <p>Number: ${number}</p>
+    <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
+    </div>`
+  }).join("");
+};
 
+
+// allows you to select teammates from the dropdown menu
+playersDropdownList.addEventListener("change", (e)  =>  {
+  playerCards.innerHTML = "";
+  switch(e.target.value){
+    case "nickname":
+  };
+    
 });
