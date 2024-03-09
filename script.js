@@ -183,4 +183,8 @@ teamName.textContent = team;
 worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
-const setPlayerCards = () => {};
+
+// added a new array to add player card information to the page
+const setPlayerCards = (( ) => {
+
+});
